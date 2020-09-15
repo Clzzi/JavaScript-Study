@@ -7,3 +7,5 @@
         단어를 넣을때마다 그 객체안에서 있는지 없는지 검사해준다. 중복이면 오류발생.
   
 (3) : 계산기를 만들었다. 여러번 계산도 가능하고 + - * / 같은 기본적인것들이 있다. C(clear)를 누르면 값이 초기화된다.      
+
+(4) : 숫자야구를 구현해보았다. Vanilla JS의 여러 함수들(splice / push / Math / join / entries / Number / String / append / createElement)을 공부했다.
