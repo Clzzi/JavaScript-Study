@@ -9,3 +9,5 @@
 (3) : 계산기를 만들었다. 여러번 계산도 가능하고 + - * / 같은 기본적인것들이 있다. C(clear)를 누르면 값이 초기화된다.      
 
 (4) : 숫자야구를 구현해보았다. Vanilla JS의 여러 함수들(splice / push / Math / join / entries / Number / String / append / createElement)을 공부했다.
+
+(5 : 로또추첨기를 만들어보았다. 이번에 배운 함수는 (setTimeout / map / fill / slice / splice /sort) 였는데, 특히 sort , map, setTimeout 함수가 인상적이다. 
