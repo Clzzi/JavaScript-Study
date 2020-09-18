@@ -54,11 +54,9 @@ setTimeout(() => {
     bonusTag.appendChild(bonusBall);
 }, 4450);
 
-
 //console.log(shuffle);
 //console.log(winBalls);
 //console.log(bonus);
-
 /*
     1. candidate를 배열로 선언, 45개의 배열을 fill()함수로 선언해줌
     여기서 fill()함수란 45개의 배열안의 값들을 일일히 지정 해줌
@@ -93,4 +91,17 @@ setTimeout(() => {
     5-1.setTimeout()함수는 "로또"의 긴장감을주기위해 일정시간마다 공이
     나오게끔 연출하는것, 나는 0.65(6500)초마다 하나씩 나오게하기위해
     650 * (i + 1)로 만들었다. 마지막 보너스에는 650 * 7 인 4450을 넣음
+
+    6.for문대신 forEach문을 써도 된다. 
+    return값이 있으면 map(), 없으면 forEach()를 쓴다고함. 
+    
+    winBalls. forEach/map ((number, index) => {
+    setTimeout(() => {
+        const ball = document.createElement('div');
+        ball.className = 'ball';
+        colorrise(number, ball);
+        ball.textContent = number;
+        resultTag.appendChild(ball);
+    }, 650 * (index + 1)) 
+})
 */
