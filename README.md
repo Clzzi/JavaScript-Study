@@ -11,3 +11,5 @@
 (4) : 숫자야구를 구현해보았다. Vanilla JS의 여러 함수들(splice / push / Math / join / entries / Number / String / append / createElement)을 공부했다.
 
 (5 : 로또추첨기를 만들어보았다. 이번에 배운 함수는 (setTimeout / map / fill / slice / splice /sort) 였는데, 특히 sort , map, setTimeout 함수가 인상적이다. 
+
+(6) : 가위바위보 게임을 만들어보았다. 이번에 알게된점은 (고차함수 / setInterval / setTimeout / 알고리즘 /)정도인데 알고리즘이 매우 인상적이다.
