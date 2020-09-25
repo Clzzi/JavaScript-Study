@@ -50,6 +50,30 @@ document.querySelector('#exec').addEventListener('click',function(){
                     }
                 }
             });
+            td.addEventListener('click',function (e){
+                //클릭시의 주변 지뢰 개수 찾기
+                const Mtr = e.currentTarget.parentNode;
+                const Mtbody = e.currentTarget.parentNode.parentNode;
+                const can = Array.prototype.indexOf.call(Mtr.children, e.currentTarget);
+                const jul = Array.prototype.indexOf.call(Mtbody.children, Mtr);
+                if(dataset[jul][can] === 'X')
+                {
+                    e.currentTarget.textContent = '펑';
+                } else{
+                    let around = [
+                        dataset[jul][can-1],                         dataset[jul][can+1],
+                    ];
+                    if(dataset[jul-1]){
+                        around = around.concat([dataset[jul-1][can-1],dataset[jul-1][can],dataset[jul-1][can+1]])
+                    }
+                    if(dataset[jul+1]){
+                        around = around.concat([dataset[jul+1][can-1], dataset[jul+1][can],dataset[jul+1][can+1]])
+                    }
+                    e.currentTarget.textContent = around.filter(function(v) {
+                        return v === 'X';
+                    }).length;
+                }
+            });
             tr.appendChild(td);
         }
         tbody.appendChild(tr);
