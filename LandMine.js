@@ -1,3 +1,5 @@
+var tbody = document.querySelector('#table tbody');
+const dataset = [];
 document.querySelector("#exec").addEventListener('click',function(){
     const hor = parseInt(document.querySelector('#hor').value);
     const ver = parseInt(document.querySelector('#ver').value);
@@ -20,7 +22,6 @@ document.querySelector("#exec").addEventListener('click',function(){
         // 정렬된 배열에서 랜덤수를 새로운 배열에 저장해 정렬된 1 부터 n까지의 수를 
         // 랜덤적으로 shuffle에 넣어줌  
 
-    const dataset = [];
     const tbody = document.querySelector('#table tbody');
     for(let i = 0;i < ver ; i++)    
     {
@@ -31,6 +32,16 @@ document.querySelector("#exec").addEventListener('click',function(){
         {
             arr.push(1);
             const td = document.createElement('td');
+            td.addEventListener('contextmenu',function(e){
+                e.preventDefault();
+                const Mtr = e.currentTarget.parentNode;
+                const Mtbody = e.currentTarget.parentNode.parentNode;
+                const can = Array.prototype.indexOf.call(Mtr.children, e.currentTarget);
+                const jul = Array.prototype.indexOf.call(Mtbody.children, Mtr);
+                console.log(Mtr,Mtbody,can, jul);
+                e.currentTarget.textContent = "!";
+                dataset[jul][can] = '!';
+            });
             tr.appendChild(td);
         }
         tbody.appendChild(tr);
@@ -46,4 +57,3 @@ document.querySelector("#exec").addEventListener('click',function(){
     }
     console.log(dataset);
 });
-
